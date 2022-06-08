@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telegram</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/sass/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="telegram-home">
+        <div class="LeftColumn">
+          <div class="LeftMainHeader">
+            <div class="DropdownMenu">
+              <button type="button" class="mini-menu-btn" title="Open menu">
+                <img
+                  src="assets/img/icons8-menu (1).svg"
+                  alt="mini-menu-icon"
+                  onfocus="SearchFunction()"
+                />
+              </button>
+              <div class="Menu">
+                <div class="menu-items">
+                  <button class="menu-item">
+                    <i class="far fa-bookmark"></i>
+                    <h3>Saved Messages</h3>
+                  </button>
+                  <button class="menu-item">
+                    <i class="fas fa-box"></i>
+                    <h3>Archived Chats</h3>
+                  </button>
+                  <button class="menu-item">
+                    <i class="far fa-user"></i>
+                    <h3>Contacts</h3>
+                  </button>
+                  <button class="menu-item">
+                    <i class="fas fa-cog"></i>
+                    <h3>Settings</h3>
+                  </button>
+                  <button class="menu-item">
+                    <div class="mini-menu-item">
+                      <div class="menu-item-text">
+                        <i class="far fa-moon"></i>
+                        <h3>Night Mode</h3>
+                      </div>
+                      <label class="switch">
+                        <input type="checkbox" class="dark-checkbox" />
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="SearchInput">
+              <input
+                id="telegram-search-input"
+                type="text"
+                placeholder="Search"
+                class="search-input"
+                onkeyup="search_animal()"
+              />
+              <span class="icon-search">
+                <svg
+                  class="search-icon-focus"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 50 50"
+                  width="50px"
+                  height="50px"
+                >
+                  <path
+                    style="
+                      stroke: none;
+                      fill-rule: nonzero;
+                      fill: rgb(131, 120, 219);
+                      fill-opacity: 1;
+                    "
+                    d="M 21 3 C 11.601562 3 4 10.601562 4 20 C 4 29.398438 11.601562 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601562 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z M 21 7 "
+                  />
+                </svg>
+                <svg
+                  class="search-icon-default"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 50 50"
+                  width="50px"
+                  height="50px"
+                >
+                  <path
+                    style="
+                      stroke: none;
+                      fill-rule: nonzero;
+                      fill: rgb(40.000001%, 40.000001%, 40.000001%);
+                      fill-opacity: 1;
+                    "
+                    d="M 21 3 C 11.601562 3 4 10.601562 4 20 C 4 29.398438 11.601562 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601562 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z M 21 7 "
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="scroll-container">
+            <div class="chat-items"></div>
+          </div>
+        </div>
+
+        <div class="MiddleColumn"></div>
+      </div>
+    </div>
+
+    <div class="userInfoModal">
+      <div class="user__info__modal">
+        <div class="user__info__top">
+          <h2>User info</h2>
+          <button class="close__modal__btn">
+            <img src="assets/img/closeicon.svg" alt="img" />
+          </button>
+        </div>
+        <div class="user__info__header">
+          <div class="user__img">
+            <img
+              class="user__profil__img"
+              src="assets/img/sariqdev.jpg"
+              alt="profil"
+            />
+          </div>
+          <div class="user__name">
+            <h2 class="user__info__name">Jamshid Maxmudov</h2>
+            <span class="status">last seen recently</span>
+          </div>
+        </div>
+        <hr />
+        <div class="user__info__body">
+          <div class="info__body">
+            <div class="icon">
+              <img src="assets/img/phoneicon.svg" alt="phone" />
+            </div>
+            <div class="text">
+              <h3 class="phone_number">+998 90 588 99 10</h3>
+              <span>Phone</span>
+            </div>
+          </div>
+
+          <div class="info__body">
+            <div class="icon">
+              <img src="assets/img/emailignt.svg" alt="username" />
+            </div>
+            <div class="text">
+              <h3 class="username">@jamshidartschool</h3>
+              <span>Username</span>
+            </div>
+          </div>
+
+          <div class="info__body">
+            <div class="icon">
+              <img src="assets/img/undov.svg" alt="bio" />
+            </div>
+            <div class="text">
+              <h3 class="bio">MERN stack developer in Uzbekistan</h3>
+              <span>Bio</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/6277ef4f6a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/users.js"></script>
+  </body>
+</html>
